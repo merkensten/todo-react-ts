@@ -1,0 +1,37 @@
+// SCSS Files Imports
+@import './global/normalize.scss';
+@import './variables.scss';
+@import './global/fonts.scss';
+
+// Img base style
+img {
+  width: 100%;
+}
+
+// Containers
+
+.content-container {
+  padding: 0 $spacing-m;
+  max-width: $max-width-desktop;
+  margin: 0 auto;
+}
+
+.list-normal-style {
+  list-style: inside;
+
+  li + li {
+    margin-top: $spacing-s;
+  }
+}
+
+.btn-global {
+  outline: none;
+  border: none;
+  margin-top: $spacing-s;
+  padding: 10px $spacing-xl;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: $p-large;
+  background-color: $color-primary;
+  color: $color-off-white;
+}

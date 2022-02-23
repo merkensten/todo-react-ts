@@ -1,0 +1,10 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Mattis",
+      "email": "m.erkensten@icloud.com",
+      "password": "Sittam"
+    }
+  ]
+}
