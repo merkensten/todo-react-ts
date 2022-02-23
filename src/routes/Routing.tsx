@@ -1,6 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { RoutingPath } from './RoutingPath';
-import { useState } from 'react';
 
 // --------- views
 import { Layout } from '../views/Layout';
@@ -16,39 +15,25 @@ import { SignInView } from '../views/guest-views/sign-in-view/SignInView';
 import { NotFound } from '../views/not-found-view/NotFoundView';
 
 export const Routing: React.FC = () => {
-  // skapa ett globalt context för detta istället
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
-
   return (
     <Layout>
-      <BrowserRouter>
-        <Routes>
-          <Route path={'/'}>
-            {/* Routes for App view*/}
-            {isLoggedIn && (
-              <>
-                <Route index element={<AppView />} />
-                <Route path={RoutingPath.account} element={<AccountView />} />
-              </>
-            )}
+      <Routes>
+        <Route path={'/'}>
+          <Route index element={<SignInView />} />
+          <Route
+            path={RoutingPath.createAccount}
+            element={<CreateAccountView />}
+          />
 
-            {/* Routes för utloggat läge */}
-            {!isLoggedIn && (
-              <>
-                <Route index element={<SignInView />} />
-                <Route
-                  path={RoutingPath.createAccount}
-                  element={<CreateAccountView />}
-                />
-              </>
-            )}
-
-            {/* Not found route */}
-            <Route path="*" element={<NotFound />} />
+          <Route path={'/app'}>
+            <Route index element={<AppView />} />
+            <Route path={RoutingPath.account} element={<AccountView />} />
           </Route>
-        </Routes>
-      </BrowserRouter>
-      <button onClick={() => setIsLoggedIn(!isLoggedIn)}>Switch login</button>
+
+          {/* Not found route */}
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
     </Layout>
   );
 };

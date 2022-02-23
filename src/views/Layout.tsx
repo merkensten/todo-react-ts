@@ -5,7 +5,7 @@ export const Layout: React.FC = ({ children }) => {
   return (
     <>
       <Header />
-      {children}
+      <main style={{ minHeight: 'calc(100vh - 560px)' }}>{children}</main>
       <Footer />
     </>
   );

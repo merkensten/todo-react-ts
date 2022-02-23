@@ -1,0 +1,13 @@
+@import '../../styles/variables.scss';
+
+.header {
+  box-shadow: $box-shadow-primary;
+  .header_wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: $max-width-desktop;
+    margin: 0 auto;
+    height: 80px;
+    align-items: center;
+  }
+}

@@ -1,0 +1,26 @@
+@import '../variables.scss';
+
+main {
+  margin-top: 100px;
+}
+
+.content-wrapper {
+  max-width: $max-width-desktop;
+  margin: 0 auto;
+}
+
+input {
+  display: block;
+  padding: $spacing-s;
+  font-size: 1.8rem;
+  margin-top: $spacing-xs;
+  margin-bottom: 20px;
+  width: 100%;
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid grey;
+}
+
+.form-label {
+  font-size: 2rem;
+}

@@ -2,6 +2,7 @@
 @import './global/normalize.scss';
 @import './variables.scss';
 @import './global/fonts.scss';
+@import './global/pages.scss';
 
 // Img base style
 img {
@@ -34,4 +35,10 @@ img {
   font-size: $p-large;
   background-color: $color-primary;
   color: $color-off-white;
+}
+
+.error {
+  color: red;
+  padding: 0;
+  margin: 0;
 }

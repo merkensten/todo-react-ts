@@ -1,0 +1,19 @@
+@import '../../styles/variables.scss';
+
+.footer {
+  background-color: $color-secondary;
+  margin-top: 100px;
+
+  .footer_wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: $max-width-desktop;
+    margin: 0 auto;
+    height: 300px;
+    align-items: center;
+
+    h2 {
+      color: white;
+    }
+  }
+}
